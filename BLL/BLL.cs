@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Threading;
 using UnitTestProjectMs.PageObjects;
 
 
@@ -78,8 +77,7 @@ namespace UnitTestProjectMs.BLL
         public string[] GettingscoreFromBigScreenPage(string team1, string team2)
         {
             MachResult machResult = new MachResult(team1, team2);
-            machResult.ButtonClickONTeams();
-            Thread.Sleep(2000);          
+            machResult.ButtonClickONTeams();       
             var bigBoardScreen = new BigBoardScorePage();
             return  bigBoardScreen.GetResultFromTheScreen();
              
